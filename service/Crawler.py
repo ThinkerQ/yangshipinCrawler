@@ -55,7 +55,7 @@ class Crawler:
     def all_info_parse(self, script_json):
         info = json.loads(script_json)
         payloads = info['payloads']
-        share_video = payloads['share_video']
+        share_video = payloads['sharevideo']
         share_video.pop('streams')
         share_video['updateTime'] = self.crawl_timestamp
         # 存储到mongodb
